@@ -1,0 +1,26 @@
+.sidebar {
+    width: 25%;
+    background-color: $COLOR_PRIMARY;
+	box-shadow: 12px 0px 0px $COLOR_PRIMARY_SHADOW;
+
+	text-transform: uppercase;
+
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+    &--active {
+        width: 100%;
+        box-shadow: 12px 12px 0px $COLOR_PRIMARY_SHADOW;
+    }
+}
+
+.labels {
+	list-style-type: none;
+
+	&__link {
+		font-size: 1.4rem;
+		text-decoration: none;
+	}
+}
