@@ -7,7 +7,6 @@ import Content from "./components/content";
 
 const LABELS = ["about", "projects", "resume", "posts"];
 
-// TODO: consider removing code for labels
 class App extends Component {
 	static propTypes = {
 		location: PropTypes.object.isRequired

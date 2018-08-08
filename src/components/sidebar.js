@@ -13,10 +13,6 @@ export default class Sidebar extends Component {
                     <h4>development</h4>
                 </div>
                 <ul className="labels">
-                    {/* Generates li for each label in props
-                        TODO: consider refactoring this to use props.children
-                        and generate li in parent to improve readability
-                    */}
                     {this.props.labels.map((label) => {
                         return ( 
                             <li 
