@@ -1,3 +1,5 @@
+/* --- 
+----- SIDEBAR CONTAINER*/
 .sidebar {
     width: 25%;
     background-color: $COLOR_PRIMARY;
@@ -9,18 +11,86 @@
 	flex-direction: column;
 	align-items: center;
 
+	transition: all .2s;
 
+	/*FULL SCREEN THIS BABY*/
     &--active {
-        width: 100%;
+		width: 95%;
+		height: 95%;
+		margin: auto;
         box-shadow: 12px 12px 0px $COLOR_PRIMARY_SHADOW;
-    }
+	}
 }
 
+/* --- 
+----- LOGO CONTAINER*/
+.logo {
+	text-align: center;
+
+	margin-top: 14rem;
+}
+
+/* --- 
+----- LABELS CONTAINER*/
 .labels {
 	list-style-type: none;
 
-	&__link {
+	margin-top: 8.8rem;
+
+	&__item {
+		position: relative;
+		width: 40.7rem;
+		height: 5.5rem;
+		cursor: pointer;
+		transition: all .2s;
+
+		&:not(:last-child) {
+			margin-bottom: .8rem;
+		}
+
+		&:hover {
+			background-color: $COLOR_GREY_LIGHT;
+
+			& > .labels__link {
+				right: 6.3rem;
+				bottom: 1.7rem;
+			}
+		}
+	}
+
+	&__link:link, &__link:visited {
+		position: absolute;
+		right: 4.2rem;
+		bottom: 1rem;
+
+		color: $COLOR_LOGO;
 		font-size: 1.4rem;
+		letter-spacing: .3em;
+		text-decoration: none;
+
+		transition: all .2s;
+	}
+}
+
+/* --- 
+----- LINKS CONTAINER*/
+.links {
+	text-align: center;
+
+	margin-top: 6rem;
+
+	&__link:link,
+	&__link:visited {
+		&:first-child {
+			margin-bottom: 2.6rem;
+			letter-spacing: 0.15em;
+		}
+
+		display: block;
+
+		color: $COLOR_LINKS;
+		font-size: 1.4rem;
+		letter-spacing: 0.25em;
 		text-decoration: none;
 	}
 }

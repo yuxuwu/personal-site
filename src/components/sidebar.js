@@ -25,6 +25,11 @@ export default class Sidebar extends Component {
                         );
                     })}
                 </ul>
+				<div class="links">
+					<a href="#" class="links__link">yuxu.wu1@gmail.com</a>
+					<a href="#" class="links__link">github://yuxuwu</a>
+					<a href="#" class="links__link">linkedin://yu-xuan-wu</a>
+				</div>
             </div>
         );
     }
