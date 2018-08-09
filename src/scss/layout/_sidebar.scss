@@ -18,7 +18,11 @@
 		width: 95%;
 		height: 95%;
 		margin: auto;
-        box-shadow: 12px 12px 0px $COLOR_PRIMARY_SHADOW;
+		box-shadow: 12px 12px 0px $COLOR_PRIMARY_SHADOW;
+		
+		& + .content {
+			margin: 0;
+		}
 	}
 }
 

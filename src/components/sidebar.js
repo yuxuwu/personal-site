@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom';
 
 export default class Sidebar extends Component {
 	render() {
-		const sidebarClassName = this.props.isSidebarActive ? "sidebar sidebar--active" : "sidebar";
+		const m_sidebarClassName = this.props.isSidebarActive ? "sidebar sidebar--active" : "sidebar";
 
 		return (
-			<div className={sidebarClassName}>
+			<div className={m_sidebarClassName}>
 				<div className="logo">
 					<h2>yu xuan wu</h2>
 					<h4>web & graphics</h4>
 					<h4>development</h4>
 				</div>
 				<ul className="labels">
+					{/*Generates routes based on labels prop*/}
 					{this.props.labels.map((label) => {
 						return (
 							<li

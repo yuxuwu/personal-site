@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Sidebar from "./components/sidebar";
 import Content from "./components/content";
 
+// Sidebar labels, add to this to add a label. Might need to adjust SCSS
 const LABELS = ["about", "projects", "resume", "posts"];
 
 class App extends Component {
@@ -14,6 +15,8 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
+		/* On load, determine if we are on "/". This makes this.state.sidebarActive true.
+		 * If we are not on "/", matchPath() returns a null object */
 		const onRootPath = (matchPath(this.props.location.pathname, { path: "/", exact: true }) != null)
 		this.state = {
 			selectedLabel: "about",
@@ -38,5 +41,6 @@ class App extends Component {
 	}
 }
 
+// Need router for props, to find location
 const AppWithRouter = withRouter(App);
 export default AppWithRouter;
