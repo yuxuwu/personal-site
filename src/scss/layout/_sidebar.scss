@@ -11,7 +11,7 @@
 	flex-direction: column;
 	align-items: center;
 
-	transition: all .2s;
+	@include transition_default;
 
 	/*FULL SCREEN THIS BABY*/
     &--active {
@@ -20,7 +20,7 @@
 		margin: auto;
 		box-shadow: 12px 12px 0px $COLOR_PRIMARY_SHADOW;
 		
-		& + .content {
+		& + .content-container {
 			margin: 0;
 		}
 	}
@@ -46,13 +46,20 @@
 		width: 40.7rem;
 		height: 5.5rem;
 		cursor: pointer;
-		transition: all .2s;
+		@include transition_default;
+
+		&--active {
+			background-color: $COLOR_GREY_DARK;
+			& > .labels__link {
+				color: white !important;
+			}
+		}
 
 		&:not(:last-child) {
 			margin-bottom: .8rem;
 		}
 
-		&:hover {
+		&:hover:not(.labels__item--active) {
 			background-color: $COLOR_GREY_LIGHT;
 
 			& > .labels__link {
@@ -72,7 +79,7 @@
 		letter-spacing: .3em;
 		text-decoration: none;
 
-		transition: all .2s;
+		@include transition_default;
 	}
 }
 

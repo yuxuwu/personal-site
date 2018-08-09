@@ -6,7 +6,7 @@ import Sidebar from "./components/sidebar";
 import Content from "./components/content";
 
 // Sidebar labels, add to this to add a label. Might need to adjust SCSS
-const LABELS = ["about", "projects", "resume", "posts"];
+const LABELS = ["about", "projects", "résumé", "posts"];
 
 class App extends Component {
 	static propTypes = {
@@ -19,7 +19,7 @@ class App extends Component {
 		 * If we are not on "/", matchPath() returns a null object */
 		const onRootPath = (matchPath(this.props.location.pathname, { path: "/", exact: true }) != null)
 		this.state = {
-			selectedLabel: "about",
+			selectedLabel: "",
 			labels: LABELS.map(label => { return label; }),
 			sidebarActive: onRootPath
 		}
@@ -31,10 +31,11 @@ class App extends Component {
 				<Sidebar
 					onLabelSelect={selectedLabel => { this.setState({ selectedLabel, sidebarActive: false }) }}
 					labels={this.state.labels}
+					selectedLabel={this.state.selectedLabel}
 					isSidebarActive={this.state.sidebarActive}
 				/>
 				<Content
-					isSidebarActive={this.state.sidebarActive}
+					selectedLabel={this.state.selectedLabel}
 				/>
 			</div>
 		);

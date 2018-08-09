@@ -28,3 +28,12 @@ p {
 	color: $COLOR_PARAGRAPH;
 	font-weight: 300;
 }
+
+.section-header {
+	position: absolute;
+	top: -6rem;
+
+	font-size: 14.4rem;
+	color: $COLOR_SECTION_HEADER;
+	
+}

@@ -15,10 +15,11 @@ export default class Sidebar extends Component {
 				<ul className="labels">
 					{/*Generates routes based on labels prop*/}
 					{this.props.labels.map((label) => {
+						const labelClassName = label === this.props.selectedLabel ? "labels__item labels__item--active" : "labels__item"
 						return (
 							<li
 								onClick={() => { this.props.onLabelSelect(label) }}
-								className="labels__item"
+								className={labelClassName}
 								key={label}
 							>
 								<Link className="labels__link" to={"/" + label}>{label}</Link>

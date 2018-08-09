@@ -1,5 +1,15 @@
 /* --- 
 ----- CONTENT CONTAINER*/
-.content {
+.content-container {
+	position: relative;
 	margin: auto 7.5rem;
+	overflow: hidden;
+
+	height: 100%;
+	width: 100%;
+}
+
+.content {
+	top: 50%;
+	transform: translateY(50%);
 }
