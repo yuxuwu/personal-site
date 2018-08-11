@@ -2,14 +2,15 @@
 ----- CONTENT CONTAINER*/
 .content-container {
 	position: relative;
-	margin: auto 7.5rem;
-	overflow: hidden;
+	margin-left: 7.5rem;
+	padding-right: 3rem;
+	overflow-y: auto;
 
 	height: 100%;
 	width: 100%;
 }
 
 .content {
-	top: 50%;
-	transform: translateY(50%);
+	margin-top: 15rem;
+	padding-bottom: 10rem;
 }

@@ -16,13 +16,14 @@ export default class Sidebar extends Component {
 					{/*Generates routes based on labels prop*/}
 					{this.props.labels.map((label) => {
 						const labelClassName = label === this.props.selectedLabel ? "labels__item labels__item--active" : "labels__item"
+						const labelName = label === "résumé" ? "resume" : label;
 						return (
 							<li
 								onClick={() => { this.props.onLabelSelect(label) }}
 								className={labelClassName}
-								key={label}
+								key={labelName}
 							>
-								<Link className="labels__link" to={"/" + label}>{label}</Link>
+								<Link className="labels__link" to={"/" + labelName}>{label}</Link>
 							</li>
 						);
 					})}
