@@ -28,7 +28,7 @@ export default class Sidebar extends Component {
 						);
 					})}
 				</ul>
-				<div class="links">
+				<div className="links">
 					<a href="mailto:yuxu.wu1@gmail.com" className="links__link">yuxu.wu1@gmail.com</a>
 					<a href="https://github.com/yuxuwu/" className="links__link" target="_blank" rel="noopener noreferrer">github://yuxuwu</a>
 					<a href="https://www.linkedin.com/in/yu-xuan-wu/" target="_blank" className="links__link" rel="noopener noreferrer">linkedin://yu-xuan-wu</a>
