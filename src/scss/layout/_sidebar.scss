@@ -1,8 +1,13 @@
 /* --- 
 ----- SIDEBAR CONTAINER*/
 .sidebar {
-	width: 25%;
+	//width: 25%;
 	min-width: 40.7rem;
+	height: 100%;
+	@include respond(tab-port) {
+		min-width: 33rem;
+	}
+
     background-color: $COLOR_PRIMARY;
 	box-shadow: 12px 0px 0px $COLOR_PRIMARY_SHADOW;
 
@@ -11,6 +16,7 @@
     display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-around;
 
 	@include transition_default;
 
@@ -35,13 +41,11 @@
 .logo {
 	text-align: center;
 
-	margin-top: 14rem;
 }
 
 /* --- 
 ----- LABELS CONTAINER*/
 .labels {
-	margin-top: 8.8rem;
 	list-style-type: none;
 
 	:not(.sidebar--active) > & {
@@ -98,8 +102,6 @@
 ----- LINKS CONTAINER*/
 .links {
 	text-align: center;
-
-	margin-top: 6rem;
 
 	&__link:link,
 	&__link:visited {
