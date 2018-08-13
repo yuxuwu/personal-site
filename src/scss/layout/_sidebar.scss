@@ -1,6 +1,7 @@
 /* --- 
 ----- SIDEBAR CONTAINER*/
 .sidebar {
+	position: relative;
 	//width: 25%;
 	min-width: 40.7rem;
 	height: 100%;
@@ -32,6 +33,37 @@
 			padding: 0;
 			width: 0;
 		}
+	}
+
+	/*SIDEBAR TOGGLE*/
+	&__checkbox {
+		display: none;
+	}
+
+	&__checkbox:checked ~ &__button{
+
+	}
+
+	&__button {
+		position: absolute;
+		top: 1rem;
+		right: 2rem;
+		height: 7rem;
+		width: 7rem;
+		border-radius: 50%;
+		z-index: 2000;
+		text-align: center;
+
+		cursor: pointer;
+		background-color: transparent;
+
+		border: 1px solid white;
+		//box-shadow: 0 1rem 3rem rgba(#000, .1);
+	}
+
+	&__icon {
+		position: relative;
+		margin-top: 3.5rem;
 
 	}
 }
@@ -40,7 +72,7 @@
 ----- LOGO CONTAINER*/
 .logo {
 	text-align: center;
-
+	padding-top: 5rem;
 }
 
 /* --- 

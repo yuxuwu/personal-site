@@ -7,6 +7,12 @@ export default class Sidebar extends Component {
 
 		return (
 			<div className={m_sidebarClassName}>
+				{/*Sidebar Toggle for small screens*/}
+				<input type="checkbox" className="sidebar__checkbox" id="sidebar-toggle" />
+				<label for="sidebar-toggle"	className="sidebar__button">
+					<span className="sidebar__icon">&nbsp;</span>
+				</label>
+
 				<div className="logo">
 					<h2>yu xuan wu</h2>
 					<h4>web & graphics</h4>
