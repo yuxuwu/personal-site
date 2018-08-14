@@ -37,8 +37,7 @@
 	}
 
 	/*SIDEBAR TOGGLE*/
-	&__button,
-	&__button--active {
+	&__button {
 		position: absolute;
 		top: 1rem;
 		right: 2rem;
@@ -82,22 +81,35 @@
 		&::after {
 			top: .8rem;
 		}
-
 	}
 
-	&__button--active &__icon {
+	&__checkbox { display: none; }
+	&__checkbox:checked + &__button &__icon {
 		background-color: transparent;
 	}
-
-	&__button--active &__icon::after {
+	&__checkbox:checked + &__button &__icon::before {
 		top: 0;
 		transform: rotate(-135deg);
 	}
-
-	&__button--active &__icon::before {
+	&__checkbox:checked + &__button &__icon::after {
 		top: 0;
 		transform: rotate(135deg);
 	}
+
+	&__checkbox:checked ~ & {
+		width: 95%;
+		min-width: 95%; // needed to fix transition
+		height: 95%;
+		margin: auto;
+		box-shadow: 12px 12px 0px $COLOR_PRIMARY_SHADOW;
+		
+		& + .content-container {
+			margin: 0;
+			padding: 0;
+			width: 0;
+		}
+	}
+
 }
 
 /* --- 
