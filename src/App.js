@@ -6,7 +6,7 @@ import Sidebar from "./components/sidebar";
 import Content from "./components/content";
 
 // Sidebar labels, add to this to add a label. Might need to adjust SCSS
-const LABELS = ["about", "projects", "résumé", "posts"];
+const LABELS = ["about", "résumé", "projects", "posts"];
 
 class App extends Component {
 	static propTypes = {

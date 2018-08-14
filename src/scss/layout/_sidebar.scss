@@ -5,9 +5,6 @@
 	//width: 25%;
 	min-width: 40.7rem;
 	height: 100%;
-	@include respond(tab-port) {
-		min-width: 33rem;
-	}
 
     background-color: $COLOR_PRIMARY;
 	box-shadow: 12px 0px 0px $COLOR_PRIMARY_SHADOW;
@@ -21,6 +18,18 @@
 
 	@include transition_default;
 
+	@include respond(tab-land) {
+		min-width: 33rem;
+	}
+	@include respond(tab-port) {
+		width: 0rem;
+		min-width: 0rem;
+
+		& * {
+			display: none;
+		}
+	}
+
 	/*FULL SCREEN THIS BABY*/
     &--active {
 		width: 95%;
@@ -28,6 +37,17 @@
 		height: 95%;
 		margin: auto;
 		box-shadow: 12px 12px 0px $COLOR_PRIMARY_SHADOW;
+
+		@include respond(tab-port) {
+			width: 100%;
+			min-width: 100%;
+			height: 100%;
+			box-shadow: 0 0 0 0;
+
+			& * {
+				display: block;
+			}
+		}
 		
 		& + .content-container {
 			margin: 0;
