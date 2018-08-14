@@ -21,23 +21,29 @@ class App extends Component {
 		this.state = {
 			selectedLabel: "",
 			labels: LABELS.map(label => { return label; }),
-			sidebarActive: onRootPath
+			sidebarActive: onRootPath,
+			firstLoad: onRootPath
 		}
 	}
 
 	render() {
 		let iconClassName = this.state.sidebarActive ? "sidebar__icon sidebar__icon--active" : "sidebar__icon";
+
+		{/*Sidebar Toggle for screens <= 900px
+		  *Changes icon based on if the sidebar is active
+		  */}
+		let icon = !this.state.firstLoad ?
+			<div onClick={() => { this.setState({sidebarActive: !(this.state.sidebarActive)})} } className="sidebar__button">
+				<span className={iconClassName}>&nbsp;</span>
+			</div> : 
+			null;
+
+
 		return (
 			<div className="container">
-				{/*Sidebar Toggle for screens <= 900px
-				  *Changes icon based on if the sidebar is active
-				  */}
-				<div onClick={() => { this.setState({sidebarActive: !(this.state.sidebarActive)})} } className="sidebar__button">
-					<span className={iconClassName}>&nbsp;</span>
-				</div>
-
+				{icon}
 				<Sidebar
-					onLabelSelect={selectedLabel => { this.setState({ selectedLabel, sidebarActive: false }) }}
+					onLabelSelect={selectedLabel => { this.setState({ selectedLabel, sidebarActive: false, firstLoad: false }) }}
 					labels={this.state.labels}
 					selectedLabel={this.state.selectedLabel}
 					isSidebarActive={this.state.sidebarActive}
