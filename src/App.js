@@ -26,13 +26,12 @@ class App extends Component {
 	}
 
 	render() {
-		let iconClassName = this.state.sidebarActive ? "sidebar__icon--active" : "sidebar__icon";
+		let iconClassName = this.state.sidebarActive ? "sidebar__icon sidebar__icon--active" : "sidebar__icon";
 		return (
 			<div className="container">
 				{/*Sidebar Toggle for screens <= 900px
 				  *Changes icon based on if the sidebar is active
 				  */}
-				{/*<input type="checkbox" className="sidebar__checkbox" id="navi-toggle"/>*/}
 				<div onClick={() => { this.setState({sidebarActive: !(this.state.sidebarActive)})} } className="sidebar__button">
 					<span className={iconClassName}>&nbsp;</span>
 				</div>
