@@ -18,7 +18,7 @@ export default class Sidebar extends Component {
 						const labelClassName = label === this.props.selectedLabel ? "labels__item labels__item--active" : "labels__item"
 						const labelName = label === "résumé" ? "resume" : label;
 						return (
-							<li>
+							<li className="labels__item-container">
 								<Link 
 									onClick={() => { this.props.onLabelSelect(label) }}
 									className={labelClassName}

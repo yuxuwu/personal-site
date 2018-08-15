@@ -19,7 +19,7 @@ class App extends Component {
 		 * If we are not on "/", matchPath() returns a null object */
 		const onRootPath = (matchPath(this.props.location.pathname, { path: "/", exact: true }) != null)
 		this.state = {
-			selectedLabel: "",
+			selectedLabel: this.props.location.pathname.replace("/", ""),
 			labels: LABELS.map(label => { return label; }),
 			sidebarActive: onRootPath,
 			firstLoad: onRootPath
