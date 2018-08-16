@@ -4,7 +4,7 @@ const About = () => {
     return (
 		<div className="content">
 			<section>
-				<h3 className="u-margin-bottom-med">Hello</h3>
+				<h3 className="u-margin-bottom-md">Hello</h3>
 				<p>
 					Welcome to my Personal Space!
 					<br/><br/>
@@ -16,7 +16,7 @@ const About = () => {
 					<br/><br/>
 					Thanks for visiting!
 				</p>
-				<h3 className="u-margin-top-med u-float-right">Yu Xuan Wu</h3>
+				<h3 className="u-margin-top-md u-float-right">Yu Xuan Wu</h3>
 		   </section>
 		</div>
     );

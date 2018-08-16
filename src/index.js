@@ -8,5 +8,5 @@ import {Router} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 const history = createBrowserHistory()
-ReactDOM.render(<Router history={history}><App /></Router>, document.getElementById('root'));
+ReactDOM.render(<Router basename={process.env.PUBLIC_URL} history={history}><App /></Router>, document.getElementById('root'));
 registerServiceWorker();
