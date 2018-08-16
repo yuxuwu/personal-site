@@ -4,9 +4,9 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './scss/main.css';
 
-import {Router} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 const history = createBrowserHistory()
-ReactDOM.render(<Router basename={process.env.PUBLIC_URL} history={history}><App /></Router>, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter basename={process.env.PUBLIC_URL} history={history}><App /></BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();
