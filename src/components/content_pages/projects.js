@@ -2,9 +2,11 @@ import React from 'react';
 
 const Projects = () => {
     return (
-        <section>
-            Projects
-        </section>
+		<div className="content">
+			<div className="construction">
+				<p>Sorry, this page is still under construction!</p>
+			</div>
+		</div>
     );
 }
 
