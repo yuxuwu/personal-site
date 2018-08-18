@@ -37,6 +37,10 @@ p {
 	top: -5rem;
 
 	font-size: 15rem;
+	@include respond(tab-port) {
+		top: 0rem;
+		font-size: 10rem;
+	}
 	color: $COLOR_SECTION_HEADER;
 	font-weight: 300;
 }
