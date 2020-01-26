@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-panel-arrow',
+  selector: 'panel-arrow',
   templateUrl: './panel-arrow.component.html',
   styleUrls: ['./panel-arrow.component.scss']
 })

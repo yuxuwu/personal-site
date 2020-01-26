@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-panel-title',
+  selector: 'panel-title',
   templateUrl: './panel-title.component.html',
   styleUrls: ['./panel-title.component.scss']
 })

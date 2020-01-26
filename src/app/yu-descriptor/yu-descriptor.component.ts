@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-yu-descriptor',
+  selector: 'yu-descriptor',
   templateUrl: './yu-descriptor.component.html',
   styleUrls: ['./yu-descriptor.component.scss']
 })
